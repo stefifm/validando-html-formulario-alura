@@ -28,6 +28,22 @@ const mensajeError = {
   nacimiento: {
     valueMissing: 'El campo fecha de nacimiento no puede estar vacío',
     customError: 'Debes tener 18 años o más'
+  },
+  telefono: {
+    valueMissing: 'El campo número de teléfono no puede estar vacío',
+    patternMismatch: 'El formato requerido es: (código de área) número de teléfono'
+  },
+  direccion: {
+    valueMissing: 'El campo dirección completa no puede estar vacío',
+    patternMismatch: 'La dirección completa tiene que tener entre 10 y 40 caractéres'
+  },
+  ciudad: {
+    valueMissing: 'El campo ciudad no puede estar vacío',
+    patternMismatch: 'La dirección completa tiene que tener entre 10 y 40 caractéres'
+  },
+  provincia: {
+    valueMissing: 'El campo Provincia no puede estar vacío',
+    patternMismatch: 'La dirección completa tiene que tener entre 10 y 40 caractéres'
   }
 }
 

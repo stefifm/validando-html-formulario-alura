@@ -85,9 +85,8 @@
                 placeholder="Contraseña"
                 required
                 data-tipo="password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
-                title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra en mayúscula, un número y no puede contener caracteres especiales"
-                />
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra en mayúscula, un número y no puede contener caracteres especiales" />
               <label
                 class="input-label"
                 for="password"
@@ -104,10 +103,9 @@
                 id="birth"
                 class="input"
                 type="date"
-                placeholder="Fecha de nacimento" 
+                placeholder="Fecha de nacimento"
                 required
-                data-tipo="nacimiento"
-                />
+                data-tipo="nacimiento" />
               <label
                 class="input-label"
                 for="birth"
@@ -120,8 +118,12 @@
                 name="phoneNumber"
                 id="phoneNumber"
                 class="input"
-                type="text"
-                placeholder="Número telefónico" />
+                type="tel"
+                placeholder="Número telefónico"
+                pattern="\d{10}"
+                required 
+                data-tipo="telefono"
+                />
               <label
                 class="input-label"
                 for="phoneNumber"
@@ -138,7 +140,11 @@
                 id="cep"
                 class="input"
                 type="text"
-                placeholder="CEP" />
+                placeholder="CEP"
+                data-tipo="direccion"
+                required
+                pattern="[\s\S]{10,40}"
+                />
               <label
                 class="input-label"
                 for="cep"
@@ -152,7 +158,11 @@
                 id="city"
                 class="input"
                 type="text"
-                placeholder="Ciudad" />
+                placeholder="Ciudad" 
+                data-tipo="ciudad"
+                required
+                pattern="[\s\S]{10,40}"
+                />
               <label
                 class="input-label"
                 for="city"
@@ -166,11 +176,14 @@
                 id="state"
                 class="input"
                 type="text"
-                placeholder="Estado" />
+                data-tipo="provincia"
+                required
+                pattern="[\s\S]{10,40}"
+                />
               <label
                 class="input-label"
                 for="state"
-                >Estado</label
+                >Provincia</label
               >
               <span class="input-message-error">Este campo no es valido</span>
             </div>
@@ -179,6 +192,8 @@
         </form>
       </section>
     </main>
-    <script type="module" src="./js/app.js"></script>
+    <script
+      type="module"
+      src="./js/app.js"></script>
   </body>
 </html>
